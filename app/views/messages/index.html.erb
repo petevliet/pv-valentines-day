@@ -1,8 +1,16 @@
 <div class= "jumbotron">
   <h1>Valentine's Day!</h1>
-  <p>"A quote about love" -- John Lennon</p>
+  <p>"A quote about love" </p>
 
 </div>
+<br />
+
+<p>
+  <%= link_to 'New Message', new_message_path, class: 'btn btn-danger' %>
+</p>
+
+<br />
+<br />
 
 <table class= "table table-striped">
   <thead>
@@ -12,6 +20,7 @@
       <th>Anonymous?</th>
     </tr>
   </thead>
+
   <tbody>
     <% @messages.each do |message| %>
     <tr>
@@ -25,3 +34,7 @@
 
 
 </table>
+
+<br />
+<br />
+<%= image_tag 'choo.jpg', class: "img" %>
