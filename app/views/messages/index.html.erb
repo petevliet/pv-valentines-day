@@ -24,9 +24,12 @@
   <tbody>
     <% @messages.each do |message| %>
     <tr>
-      <td><%= message.title %></td>
+      <td><%= link_to message.title, message %></td>
       <td><%= message.author %></td>
       <td><%= message.anonymous %></td>
+      <td class="text-right">
+        <%= link_to 'edit', edit_message_path(message), class: 'btn btn-info' %>
+      </td>
     </tr>
     <% end %>
 

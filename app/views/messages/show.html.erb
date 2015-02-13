@@ -1,0 +1,17 @@
+<div class="page-header">
+  <h1><%= @message.title %> </h1>
+</div>
+<br />
+<br />
+
+<dl class="dl-horizontal">
+  <dt>From:  </dt>  <dr>  <%= @message.author %></dr><br />
+  <dt>Message:  </dt>  <dr>  <%= @message.message %></dr><br />
+
+</dl>
+
+<br />
+<br />
+
+<%= link_to 'back', messages_path, class: 'btn btn-default' %>
+<%= link_to 'edit', edit_message_path(@message), class: 'btn-btn primary' %>

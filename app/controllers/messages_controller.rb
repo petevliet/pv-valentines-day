@@ -4,8 +4,16 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
 
+  def show
+    @message = Message.find(params[:id])
+  end
+
   def new
     @message = Message.new
+  end
+
+  def edit
+    @message = Message.find(params[:id])
   end
 
   def create
@@ -13,6 +21,14 @@ class MessagesController < ApplicationController
 
     if @message.save
       redirect_to messages_path
+    end
+  end
+
+  def update
+    @message = Message.find(params[:id])
+
+    if @user.update(message_params)
+      redirect_to users_path
     end
   end
 
