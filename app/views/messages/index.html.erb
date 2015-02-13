@@ -1,5 +1,27 @@
 <div class= "jumbotron">
   <h1>Valentine's Day!</h1>
-  <p>"Some quote about love" -- John Lennon or something</p>  
+  <p>"A quote about love" -- John Lennon</p>
 
 </div>
+
+<table class= "table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Anonymous?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.title %></td>
+      <td><%= message.author %></td>
+      <td><%= message.anonymous %></td>
+    </tr>
+    <% end %>
+
+  </tbody>
+
+
+</table>
